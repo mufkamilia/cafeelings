@@ -12,7 +12,10 @@ class RecapPage extends StatefulWidget {
   final String selectedNote;
 
   const RecapPage(
-      {super.key, required this.selectedDate, required this.selectedMood, required this.selectedNote});
+      {super.key,
+      required this.selectedDate,
+      required this.selectedMood,
+      required this.selectedNote});
 
   @override
   State<RecapPage> createState() => _RecapPageState();
@@ -72,11 +75,12 @@ class _RecapPageState extends State<RecapPage> {
   @override
   Widget build(BuildContext context) {
     Color dotColor = moodColors[widget.selectedMood] ?? Coloors.kertas;
-    Map<String, String> moodInfo = moodDetails[dotColor] ?? {
-      'name': '-',
-      'price': '0.0',
-      'condition': '',
-    };
+    Map<String, String> moodInfo = moodDetails[dotColor] ??
+        {
+          'name': '-',
+          'price': '0.0',
+          'condition': '',
+        };
     return Scaffold(
       backgroundColor: Coloors.dinding,
       appBar: AppBar(
@@ -98,7 +102,8 @@ class _RecapPageState extends State<RecapPage> {
     );
   }
 
-  Widget _bodyRecap(Color dotColor, String selectedMood, Map<String, String> moodInfo) {
+  Widget _bodyRecap(
+      Color dotColor, String selectedMood, Map<String, String> moodInfo) {
     return ListView(children: [
       Stack(children: [
         Positioned(
@@ -251,7 +256,10 @@ class _RecapPageState extends State<RecapPage> {
                               '${moodInfo['condition']}',
                               style: TextStyle(
                                   color: (selectedDate != null &&
-                                      isSameDay(selectedDate!, DateTime.parse(widget.selectedDate)))
+                                          isSameDay(
+                                              selectedDate!,
+                                              DateTime.parse(
+                                                  widget.selectedDate)))
                                       ? dotColor // Ubah warna sesuai mood jika tanggal sama
                                       : Coloors.kertas,
                                   fontFamily: 'Nunito',
@@ -304,9 +312,11 @@ class _RecapPageState extends State<RecapPage> {
                         SizedBox(height: 10),
                         Row(
                           children: [
-                            _getTextMenuForMood(dotColor, selectedDate, widget.selectedDate),
+                            _getTextMenuForMood(
+                                dotColor, selectedDate, widget.selectedDate),
                             Spacer(),
-                            _getTextPriceForMood(dotColor, selectedDate, widget.selectedDate),
+                            _getTextPriceForMood(
+                                dotColor, selectedDate, widget.selectedDate),
                           ],
                         ),
                         SizedBox(height: 10),
@@ -369,61 +379,72 @@ class _RecapPageState extends State<RecapPage> {
     ]);
   }
 
-  Widget _getTextMenuForMood(Color dotColor, DateTime? selectedDate, String selectedDateStr) {
+  Widget _getTextMenuForMood(
+      Color dotColor, DateTime? selectedDate, String selectedDateStr) {
     // Pastikan tanggal yang dipilih valid
-    bool isSelectedDate = selectedDate != null && isSameDay(selectedDate, DateTime.parse(selectedDateStr));
+    bool isSelectedDate = selectedDate != null &&
+        isSameDay(selectedDate, DateTime.parse(selectedDateStr));
 
     // Mengambil moodInfo berdasarkan dotColor
-    Map<String, String> moodInfo = moodDetails[dotColor] ?? {
-      'name': 'Unknown',
-      'price': '0.0',
-      'condition': 'neutral',
-    };
+    Map<String, String> moodInfo = moodDetails[dotColor] ??
+        {
+          'name': 'Unknown',
+          'price': '0.0',
+          'condition': 'neutral',
+        };
 
     return Text(
       isSelectedDate ? moodInfo['name']! : '-',
       style: TextStyle(
-        color: isSelectedDate ? Coloors.button : Coloors.button.withOpacity(0.6),
+        color:
+            isSelectedDate ? Coloors.button : Coloors.button.withOpacity(0.6),
         fontFamily: 'Nunito',
         fontSize: 12,
         fontWeight: FontWeight.w500,
       ),
     );
   }
-  Widget _getTextPriceForMood(Color dotColor, DateTime? selectedDate, String selectedDateStr) {
+
+  Widget _getTextPriceForMood(
+      Color dotColor, DateTime? selectedDate, String selectedDateStr) {
     // Pastikan tanggal yang dipilih valid
-    bool isSelectedDate = selectedDate != null && isSameDay(selectedDate, DateTime.parse(selectedDateStr));
+    bool isSelectedDate = selectedDate != null &&
+        isSameDay(selectedDate, DateTime.parse(selectedDateStr));
 
     // Mengambil moodInfo berdasarkan dotColor
-    Map<String, String> moodInfo = moodDetails[dotColor] ?? {
-      'name': 'Unknown',
-      'price': '0.0',
-      'condition': 'neutral',
-    };
+    Map<String, String> moodInfo = moodDetails[dotColor] ??
+        {
+          'name': 'Unknown',
+          'price': '0.0',
+          'condition': 'neutral',
+        };
 
     return Text(
       isSelectedDate ? moodInfo['price']! : '0.0',
       style: TextStyle(
-        color: isSelectedDate ? Coloors.button : Coloors.button.withOpacity(0.6),
+        color:
+            isSelectedDate ? Coloors.button : Coloors.button.withOpacity(0.6),
         fontFamily: 'Nunito',
         fontSize: 12,
         fontWeight: FontWeight.w500,
       ),
     );
   }
+
   Widget _getNote(DateTime? selectedDate, String selectedDateStr) {
     // Pastikan tanggal yang dipilih valid
-    bool isSelectedDate = selectedDate != null && isSameDay(selectedDate, DateTime.parse(selectedDateStr));
+    bool isSelectedDate = selectedDate != null &&
+        isSameDay(selectedDate, DateTime.parse(selectedDateStr));
 
     return Text(
       isSelectedDate ? widget.selectedNote ?? '' : '',
       style: TextStyle(
-        color: isSelectedDate ? Coloors.button : Coloors.button.withOpacity(0.6),
+        color:
+            isSelectedDate ? Coloors.button : Coloors.button.withOpacity(0.6),
         fontFamily: 'Nunito',
         fontSize: 12,
         fontWeight: FontWeight.w500,
       ),
     );
   }
-
 }
