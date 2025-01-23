@@ -1,4 +1,4 @@
-# MoodTracker-Cafeelings ☕🎭  
+# MoodTracker-Cafeelings ☕🍵
 **"A simple mood tracking app to reflect and grow."**
 
 MoodTracker-Cafeelings adalah aplikasi pelacak suasana hati yang saat ini masih dalam tahap pengembangan. Aplikasi ini dirancang untuk membantu pengguna mencatat suasana hati harian mereka dan menambahkan catatan singkat sebagai refleksi pribadi.
@@ -25,8 +25,31 @@ Pastikan Anda telah menginstal:
 - IDE seperti [Android Studio](https://developer.android.com/studio) atau [Visual Studio Code](https://code.visualstudio.com/).
 - Emulator Android atau iOS, atau perangkat fisik yang sudah dihubungkan.
 
-### 2. Clone Repository
+### 2. Jalankan Proyek
+#### Clone Repository
 Unduh kode sumber dari repository ini dengan menjalankan perintah berikut:
-
 ```bash
 git clone https://github.com/mufkamilia/cafeelings.git
+```
+#### Masuk ke Direktori Proyek
+```bash
+cd MoodTracker-Cafeelings
+```
+#### Instal Dependensi
+```bash
+flutter pub get
+```
+### Jalankan Aplikasi
+```bash
+flutter run
+```
+### (Opsional) Konfigurasi Emulator
+Jika anda menggunakan emulator:
+<p>
+  - Buka Android Studio, lalu pilih Virtual Device Manager untuk memulai emulator.
+  - Pastikan emulator sudah berjalan sebelum menjalankan perintah flutter run
+<p>
+
+### 📌Catatan
+- Aplikasi ini belum terhubung ke database atau backend, sehingga data yang dimasukkan belum dapat disimpan secara permanen.
+- Semua feedback dan saran sangat dihargai untuk pengembangan lebih lanjut.
