@@ -46,7 +46,7 @@ flutter run
 #### (Optional) Configure an Emulator
 If you are using an emulator:
 <p>
-  - Open Android Studio and select Virtual Device Manager to start an emulator.
+  - Open Android Studio and select Virtual Device Manager to start an emulator. </br>
   - Ensure the emulator is running before executing the `flutter run` command.
 <p>
 
