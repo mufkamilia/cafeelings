@@ -1,55 +1,55 @@
-# MoodTracker-Cafeelings ☕🍵
+# MoodTracker-Cafeelings ☕🍵  
 **"A simple mood tracking app to reflect and grow."**
 
-MoodTracker-Cafeelings adalah aplikasi pelacak suasana hati yang saat ini masih dalam tahap pengembangan. Aplikasi ini dirancang untuk membantu pengguna mencatat suasana hati harian mereka dan menambahkan catatan singkat sebagai refleksi pribadi.
+MoodTracker-Cafeelings is a mood-tracking app currently in development. It is designed to help users record their daily mood and add brief notes as a form of personal reflection.
 
-## ✨ Fitur yang Sedang Dikembangkan  
-- **Pelacakan Mood**: Pilih suasana hati Anda setiap hari menggunakan sistem warna.  
-- **Catatan Harian**: Tambahkan catatan singkat untuk menjelaskan suasana hati Anda.  
-- **Antarmuka Minimalis**: Fokus pada desain sederhana dan ramah pengguna.  
+## ✨ Features Under Development  
+- **Mood Tracking**: Select your daily mood using a color-coded system.  
+- **Daily Notes**: Add short notes to describe your mood.  
+- **Minimalist Interface**: Focused on a clean and user-friendly design.  
 
-## 🚀 Status Proyek  
-Saat ini, **MoodTracker-Cafeelings** masih dalam tahap pengembangan frontend menggunakan **Flutter**. Fitur pelacakan mood dan catatan harian sudah dapat digunakan secara lokal, namun belum diintegrasikan dengan backend atau database.  
+## 🚀 Project Status  
+Currently, **MoodTracker-Cafeelings** is in the frontend development stage using **Flutter**. The mood tracking and daily notes features are functional locally, but they are not yet integrated with a backend or database.
 
-## 🛠️ Teknologi yang Digunakan  
-- **Flutter**: Framework utama untuk membangun aplikasi.  
-- **Dart**: Bahasa pemrograman yang digunakan.  
+## 🛠️ Technologies Used  
+- **Flutter**: The main framework for building the app.  
+- **Dart**: The programming language used.  
 
-## 📥 Cara Menjalankan Proyek
-Ikuti langkah-langkah berikut untuk menjalankan proyek **MoodTracker-Cafeelings** di komputer Anda:
+## 📥 How to Run the Project  
+Follow these steps to run the **MoodTracker-Cafeelings** project on your computer:
 
-### 1. Persyaratan Awal
-Pastikan Anda telah menginstal:
-- [Flutter SDK](https://docs.flutter.dev/get-started/install) (minimal versi 3.10.0).
-- [Dart SDK](https://dart.dev/get-dart).
-- IDE seperti [Android Studio](https://developer.android.com/studio) atau [Visual Studio Code](https://code.visualstudio.com/).
-- Emulator Android atau iOS, atau perangkat fisik yang sudah dihubungkan.
+### 1. Prerequisites  
+Make sure you have installed:  
+- [Flutter SDK](https://docs.flutter.dev/get-started/install) (minimum version 3.10.0).  
+- [Dart SDK](https://dart.dev/get-dart).  
+- An IDE such as [Android Studio](https://developer.android.com/studio) or [Visual Studio Code](https://code.visualstudio.com/).  
+- An Android or iOS emulator, or a connected physical device.
 
-### 2. Jalankan Proyek
-#### Clone Repository
-Unduh kode sumber dari repository ini dengan menjalankan perintah berikut:
+### 2. Running the Project  
+#### Clone the Repository  
+Download the source code by running the following command:  
 ```bash
 git clone https://github.com/mufkamilia/cafeelings.git
 ```
-#### Masuk ke Direktori Proyek
+#### Navigate to the Project Directory
 ```bash
 cd MoodTracker-Cafeelings
 ```
-#### Instal Dependensi
+#### Install Dependencies
 ```bash
 flutter pub get
 ```
-### Jalankan Aplikasi
+#### RUn the App
 ```bash
 flutter run
 ```
-### (Opsional) Konfigurasi Emulator
-Jika anda menggunakan emulator:
+#### (Optional) Configure an Emulator
+If you are using an emulator:
 <p>
-  - Buka Android Studio, lalu pilih Virtual Device Manager untuk memulai emulator.
-  - Pastikan emulator sudah berjalan sebelum menjalankan perintah flutter run
+  - Open Android Studio and select Virtual Device Manager to start an emulator.
+  - Ensure the emulator is running before executing the `flutter run` command.
 <p>
 
-### 📌Catatan
-- Aplikasi ini belum terhubung ke database atau backend, sehingga data yang dimasukkan belum dapat disimpan secara permanen.
-- Semua feedback dan saran sangat dihargai untuk pengembangan lebih lanjut.
+## 📌Notes
+- This app is not yet connected to a database or backend, so the entered data cannot be saved permanently.
+- Feedback and suggestions are greatly appreciated for further development.
